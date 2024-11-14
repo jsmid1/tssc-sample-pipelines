@@ -81,7 +81,7 @@ spec:
       fi
 
       echo "Dockerfile:"
-      cat $dockerfile_path
+      cat "$dockerfile_path"
 
       BUILDAH_ARGS=()
       if [ -n "${BUILD_ARGS_FILE}" ]; then
