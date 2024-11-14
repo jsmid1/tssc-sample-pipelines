@@ -80,6 +80,9 @@ spec:
         exit 1
       fi
 
+      echo "Dockerfile:"
+      cat dockerfile_path
+
       BUILDAH_ARGS=()
       if [ -n "${BUILD_ARGS_FILE}" ]; then
         BUILDAH_ARGS+=("--build-arg-file=${SOURCE_CODE_DIR}/${BUILD_ARGS_FILE}")
